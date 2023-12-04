@@ -36,8 +36,8 @@ h1 {
   position: absolute;
   bottom: -17px;
   top: 120px;
+  transition: top 0.3s ease-in-out;
 }
 .land.show .mole {
-  transition: top 0.3s;
   top: 30px;
 }
