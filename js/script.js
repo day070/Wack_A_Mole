@@ -1,7 +1,11 @@
-const tanah = document.querySelectorAll(".land");
-const tikus = document.querySelectorAll(".mole");
+const tanah = document.querySelectorAll(".tanah");
+const tikus = document.querySelectorAll(".tikus");
+const papanSkor = document.querySelector(".papanSkor");
+const pop = document.getElementById("pop");
 
 let tanahSebelumnya;
+let selesai;
+let skor;
 
 function randomTanah(tanah) {
   const t = Math.floor(Math.random() * tanah.length);
@@ -14,11 +18,40 @@ function randomTanah(tanah) {
   return tRandom;
 }
 
+function randomWaktu(min, max) {
+  return Math.round(Math.random() * (max - min) + min);
+}
+
 function munculkanTikus() {
   const tRandom = randomTanah(tanah);
+  const wRandom = randomWaktu(300, 1000);
   tRandom.classList.add("show");
 
   setTimeout(() => {
     tRandom.classList.remove("show");
-  }, 500);
+    if (!selesai) {
+      munculkanTikus();
+    }
+  }, wRandom);
 }
+
+function mulai() {
+  selesai = false
+  skor = 0;
+  papanSkor.innerHTML=0;
+  munculkanTikus();
+  setTimeout(() => {
+    selesai = true;
+  }, 15000);
+}
+
+function pukul() {
+  skor++;
+  papanSkor.innerHTML = skor;
+  pop.play();
+}
+
+tikus.forEach(t => {
+  t.addEventListener('click', pukul )
+    console.log(this);
+});
