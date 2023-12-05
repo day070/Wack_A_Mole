@@ -2,6 +2,7 @@ const tanah = document.querySelectorAll(".tanah");
 const tikus = document.querySelectorAll(".tikus");
 const papanSkor = document.querySelector(".papanSkor");
 const pop = document.getElementById("pop");
+const gas = document.querySelector(".mulai");
 
 let tanahSebelumnya;
 let selesai;
@@ -39,9 +40,11 @@ function mulai() {
   selesai = false
   skor = 0;
   papanSkor.innerHTML=0;
+  gas.classList.add("none");
   munculkanTikus();
   setTimeout(() => {
     selesai = true;
+    gas.classList.remove("none");
   }, 15000);
 }
 
