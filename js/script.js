@@ -1,6 +1,6 @@
 const tanah = document.querySelectorAll(".tanah");
 const tikus = document.querySelectorAll(".tikus");
-const papanSkor = document.querySelector(".papanSkor");
+// const papanSkor = document.querySelector(".papanSkor");
 const pop = document.getElementById("pop");
 const gas = document.querySelector(".mulai");
 
@@ -37,9 +37,9 @@ function munculkanTikus() {
 }
 
 function mulai() {
-  selesai = false
+  selesai = false;
   skor = 0;
-  papanSkor.innerHTML=0;
+  // papanSkor.innerHTML = 0;
   gas.classList.add("none");
   munculkanTikus();
   setTimeout(() => {
@@ -50,11 +50,11 @@ function mulai() {
 
 function pukul() {
   skor++;
-  papanSkor.innerHTML = skor;
+  // papanSkor.innerHTML = skor;
   pop.play();
 }
 
-tikus.forEach(t => {
-  t.addEventListener('click', pukul )
-    console.log(this);
+tikus.forEach((t) => {
+  t.addEventListener("click", pukul);
+  console.log(this);
 });

@@ -1,5 +1,37 @@
-body{
-  background: url(../image/bg.jpg) center no-repeat;
+* {
+  padding: 0;
+  margin: 0;
+}
+.backgruound {
+  background: url(../image/bg-whcak.jpg) center no-repeat;
+  width: 100%;
+  height: 112vh;
+  /* height: 110vh; */
+  position: absolute;
+  z-index: -2;
+  margin-top: -90px;
+  background-size: 100%;
+}
+.kotak {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 555px;
+  height: 200px;
+  border-radius: 10px;
+  background: #b4a292;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mulai {
+  width: 120px;
+  height: 70px;
+  border-radius: 0px 20px;
+  background: #070707;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 h1,
 h2 {
@@ -8,36 +40,29 @@ h2 {
   font-family: Arial, Helvetica, sans-serif;
   margin: 10px;
   color: rgb(0, 0, 0);
-  
 }
 button {
   display: block;
   margin: auto;
 }
-.mulai{
-  background-color: black;
-  border: none;
-  width: 100px;
-  height: 30px;
-  color: white  ;
-  border-radius: 2px;
-}
-.mulai.none{
-display: none;
+.mulai.none {
+  display: none;
 }
 .container {
   width: 600px;
   height: 400px;
   margin: auto;
-  cursor:url(../image/palu1.png), auto;
+  margin-top: 100px;
+  cursor: url(../image/palu1.png), auto;
 }
 .container:active {
-  cursor:url(../image/palu2.png), auto;
+  cursor: url(../image/palu2.png), auto;
 }
 
 .tanah {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  margin-top: -30px;
+  height: 180px;
   position: relative;
   overflow: hidden;
   float: left;
@@ -46,30 +71,32 @@ display: none;
 .tanah::after {
   content: "";
   display: block;
-  width: 200px;
-  height: 50px;
+  width: 180px;
+  height: 70px;
   background: url(../image/tanah.png) bottom no-repeat;
   background-size: 80%;
   position: absolute;
-  bottom: -15px;
+  bottom: -17px;
 }
 
 .tikus {
-  width: 100%;
-  height: 100%;
+  width: 55%;
+  height: 70%;
   background: url(../image/tikus.png) bottom no-repeat;
   background-size: 90%;
   position: absolute;
-  bottom: -17px;
-  top: 180px;
-  transition: top 0.5s ;
+  bottom: -170px;
+  top: 190px;
+  transition: top 0.5s;
+  margin-left: 40px;
 }
 .tanah.show .tikus {
   top: 30px;
+  margin-left: 40px;
 }
-.hilang{
+.hilang {
   display: none;
 }
-.muncul{
+.muncul {
   display: block;
 }
