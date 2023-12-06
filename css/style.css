@@ -100,3 +100,9 @@ button {
 .muncul {
   display: block;
 }
+.papanSkor.none {
+  display: none;
+}
+.ppn.none {
+  display: none;
+}

@@ -1,7 +1,8 @@
 const tanah = document.querySelectorAll(".tanah");
 const tikus = document.querySelectorAll(".tikus");
-// const papanSkor = document.querySelector(".papanSkor");
+const papanSkor = document.querySelector(".papanSkor");
 const pop = document.getElementById("pop");
+const ppn = document.querySelector(".ppn");
 const gas = document.querySelector(".mulai");
 
 let tanahSebelumnya;
@@ -39,18 +40,22 @@ function munculkanTikus() {
 function mulai() {
   selesai = false;
   skor = 0;
-  // papanSkor.innerHTML = 0;
+  papanSkor.innerHTML = 0;
   gas.classList.add("none");
+  papanSkor.classList.remove("none");
+  ppn.classList.remove("none");
   munculkanTikus();
   setTimeout(() => {
     selesai = true;
     gas.classList.remove("none");
+    papanSkor.classList.add("none");
+    ppn.classList.add("none");
   }, 15000);
 }
 
 function pukul() {
   skor++;
-  // papanSkor.innerHTML = skor;
+  papanSkor.innerHTML = skor;
   pop.play();
 }
 
