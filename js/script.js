@@ -26,7 +26,7 @@ function randomWaktu(min, max) {
 
 function munculkanTikus() {
   const tRandom = randomTanah(tanah);
-  const wRandom = randomWaktu(300, 1000);
+  const wRandom = randomWaktu(500, 800);
   tRandom.classList.add("show");
 
   setTimeout(() => {
