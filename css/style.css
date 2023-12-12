@@ -106,3 +106,42 @@ button {
 .ppn.none {
   display: none;
 }
+
+@media screen and (max-width: 600px) {
+  .kotak {
+    width: 300px;
+    height: 100px;
+  }
+  .kotak h2 {
+    font-size: 20px;
+  }
+  .kotak button {
+    width: 50px;
+    height: 50px;
+  }
+  .svg-buton {
+    width: 20px;
+  }
+  .backgruound {
+    width: 0;
+  }
+  .container {
+    width: 350px;
+    height: 100vh;
+    margin-top: -9px;
+  }
+  .tanah {
+    width: 150px;
+  }
+  .tanah::after {
+    height: 50px;
+    background-size: 60%;
+  }
+  .tikus {
+    margin-left: 50px;
+  }
+  .tanah.show .tikus {
+    top: 40px;
+    margin-left: 50px;
+  }
+}
