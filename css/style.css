@@ -24,6 +24,9 @@
   align-items: center;
   justify-content: center;
 }
+.svg-buton {
+  width: 40px;
+}
 .mulai {
   width: 120px;
   height: 70px;
@@ -111,6 +114,8 @@ button {
   .kotak {
     width: 300px;
     height: 100px;
+    background-color: transparent;
+    box-shadow: 0 3px 6px black;
   }
   .kotak h2 {
     font-size: 20px;
@@ -123,7 +128,12 @@ button {
     width: 20px;
   }
   .backgruound {
-    width: 0;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(
+      circle,
+      rgba(238, 174, 202, 1) 0%,
+      rgba(148, 187, 233, 1) 100%
+    );
   }
   .container {
     width: 350px;
